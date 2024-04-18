@@ -14,6 +14,10 @@ import Adidas from "/public/assets/images/Adidas.png";
 import Nike from "/public/assets/images/Nike.png";
 import Puma from "/public/assets/images/Puma.png";
 import NB from "/public/assets/images/NB.png";
+import shoe_1 from "/public/assets/images/shoe_1.png";
+import shoe_2 from "/public/assets/images/shoe_2.png";
+import shoe_3 from "/public/assets/images/shoe_3.png";
+import shoe_4 from "/public/assets/images/shoe_4.png";
 
 export default function Home() {
 	return (
@@ -78,7 +82,7 @@ export default function Home() {
 				</div>
 			</header>
 			{/* Our Service */}
-			<section id="services" className="grid grid-cols-4 gap-5 mt-6 md:grid-cols-8 lg:grid-cols-12 md:mt-24 lg:mt-32 py-6">
+			<section id="services" className="grid grid-cols-4 gap-5 py-6 mt-6 md:grid-cols-8 lg:grid-cols-12 md:mt-24 lg:mt-32">
 				<div className="col-span-full space-y-4 text-center w-min-[290px] lg:w-max-[410px] mb-6 md:mb-14 ">
 					<h2 className="text-3xl md:text-5xl text-[#333333]">Our Services</h2>
 					<p className="text-base md:text-lg text-[#717171]">Dive into Our Range of Expert Shoe & Sneaker Care Solutions</p>
@@ -163,7 +167,7 @@ export default function Home() {
 			{/* Benefits */}
 			<section id="benefits" className="flex flex-col lg:flex-row-reverse lg:gap-5 lg:max-w-[1080px] mx-auto py-6 mt-6">
 				{/* accordion */}
-				<div className="flex flex-col lg:max-w-[580px]">
+				<div className="flex flex-col lg:w-2/4">
 					<div className="col-span-full space-y-4 w-min-[290px] lg:w-max-[410px] mb-6 md:mb-14 lg:mb-8 ">
 						<h2 className="text-3xl md:text-5xl text-[#333333]">Benefits Of Using Globalclean Services</h2>
 						<p className="text-base md:text-lg text-[#717171]">
@@ -171,7 +175,7 @@ export default function Home() {
 							Globalclean for Your Shoe & Sneaker Care Needs
 						</p>
 					</div>
-					<Accordion type="single" collapsible defaultValue="item-1" className=" space-y-6">
+					<Accordion type="single" collapsible defaultValue="item-1" className="space-y-6 ">
 						<AccordionItem value="item-1">
 							<AccordionTrigger>
 								<svg xmlns="http://www.w3.org/2000/svg" className="size-8 fill-[#333]" viewBox="0 0 32 32">
@@ -231,10 +235,25 @@ export default function Home() {
 					</Accordion>
 				</div>
 				{/* photo */}
-				<div className="overflow-hidden rounded-2xl mt-5 lg:mt-0">
-					<div className=" min-h-[290px] bg-[#C4C4C4] md:min-h-[530px]"></div>
-					<div className="bg-[#575757] py-4 px-8 text-white flex">
-						<div className="hidden md:block"></div>
+				<div className="mt-5 overflow-hidden rounded-2xl lg:mt-0 lg:lg:w-2/4 lg:size-fit">
+					<div className=" min-h-[290px] bg-[#C4C4C4] md:min-h-[530px] flex items-center justify-center">
+						<Image src={shoe_1} alt="shoe photo" className="size-[432px]" />
+					</div>
+					<div className="bg-[#575757] py-4 px-8 text-white flex gap-4 items-center">
+						<div className="hidden md:block rounded-[8px] bg-gradient-to-tr from-white to-neutral- p-[1px]">
+							<div className="bg-[#797979] size-16 rounded-[8px] flex items-center justify-center">
+								<svg xmlns="http://www.w3.org/2000/svg" className="size-8 fill-white" viewBox="0 0 32 32">
+									<g clipPath="url(#clip0_764_12)">
+										<path d="M31.058 17.98c0 7.73-6.29 14.02-14.02 14.02C9.328 32 3.055 25.747 3.02 18.046H.942l3.116-4.674 3.115 4.674H5.357c.037 6.412 5.26 11.617 11.681 11.617 6.442 0 11.684-5.24 11.684-11.683S23.48 6.296 17.038 6.296a1.168 1.168 0 110-2.337c7.73 0 14.02 6.29 14.02 14.02zm-14.02 8.698c-4.795 0-8.698-3.904-8.698-8.698a.39.39 0 10-.778 0c0 5.224 4.25 9.477 9.476 9.477 5.226 0 9.476-4.253 9.476-9.477 0-5.226-4.25-9.479-9.476-9.479a.39.39 0 100 .78c4.796 0 8.698 3.902 8.698 8.699.001 4.796-3.901 8.698-8.698 8.698zm-4.497-3.015c.229.23.527.344.827.344.3 0 .597-.117.827-.344l3.67-3.668c.22-.22.343-.517.343-.827v-6.61a1.17 1.17 0 00-2.337 0v6.126l-3.33 3.328a1.168 1.168 0 000 1.651zM14.164 6.91c.535.452.804 1.28.804 2.483 0 1.295-.292 2.205-.882 2.726-.584.521-1.612.786-3.078.786l-.426.008v1.371H9.187v-1.37l-.395-.01c-1.46 0-2.486-.25-3.079-.75-.591-.501-.89-1.369-.89-2.606l.01-.418h2.07v.215c0 .753.12 1.24.358 1.46.241.216.784.327 1.618.327l.307.01V7.82c-1.632 0-2.744-.238-3.344-.709-.592-.47-.892-1.353-.892-2.648 0-1.256.3-2.115.897-2.578.6-.461 1.712-.695 3.339-.695V0h1.394v1.191c1.55 0 2.613.222 3.18.664.574.445.86 1.268.86 2.473v.28h-2.002l-.007-.22c0-.91-.57-1.364-1.704-1.364h-.327v3.067l.46.016c1.542.082 2.583.351 3.124.803zM9.19 3.013l-.3.01c-1.226 0-1.839.485-1.839 1.456 0 1.018.607 1.525 1.832 1.525.013 0 .112.008.306.018V3.013h.001zm3.683 6.416c0-.626-.146-1.037-.443-1.236-.295-.198-.91-.297-1.849-.297v3.245h.3c1.328 0 1.992-.571 1.992-1.712z"></path>
+									</g>
+									<defs>
+										<clipPath id="clip0_764_12">
+											<path d="M0 0H32V32H0z"></path>
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
 						<p>Transform your shoes into like-new condition for only $2 with our remarkable services!</p>
 					</div>
 				</div>
@@ -307,21 +326,21 @@ export default function Home() {
 			</section>
 			{/* Partner */}
 			<section className="grid grid-cols-4 gap-5 mt-6 md:grid-cols-8 lg:grid-cols-12 md:mt-24 lg:mt-32 place-items-center place-content-center">
-				<div className="col-span-2 flex justify-center items-center size-32 lg:col-start-3">
+				<div className="flex items-center justify-center col-span-2 size-32 lg:col-start-3">
 					<Image src={Adidas} alt="Adidas Logo" className="object-contain opacity-30" />
 				</div>
-				<div className="col-span-2 flex justify-center items-center size-32">
+				<div className="flex items-center justify-center col-span-2 size-32">
 					<Image src={Nike} alt="Nike Logo" className="object-contain opacity-30" />
 				</div>
-				<div className="col-span-2 flex justify-center items-center size-32">
+				<div className="flex items-center justify-center col-span-2 size-32">
 					<Image src={NB} alt="NB Logo" className="object-contain opacity-30" />
 				</div>
-				<div className="col-span-2 flex justify-center items-center size-32">
+				<div className="flex items-center justify-center col-span-2 size-32">
 					<Image src={Puma} alt="Puma Logo" className="object-contain opacity-30" />
 				</div>
 			</section>
 			{/* Testimonial */}
-			<section id="testimonial" className="grid grid-cols-4 gap-5 mt-6 md:grid-cols-8 lg:grid-cols-12 md:mt-24 lg:mt-32 place-items-stretch py-6">
+			<section id="testimonial" className="grid grid-cols-4 gap-5 py-6 mt-6 md:grid-cols-8 lg:grid-cols-12 md:mt-24 lg:mt-32 place-items-stretch">
 				<div className="col-span-full space-y-4 w-min-[290px] lg:w-max-[410px] mb-6 md:mb-14 text-center ">
 					<h2 className="text-3xl md:text-5xl text-[#333333]">What Our Clients Are Saying</h2>
 					<p className="text-base md:text-lg text-[#717171]">Discover the Experiences and Testimonials of Our Satisfied Customers</p>
@@ -330,9 +349,11 @@ export default function Home() {
 				{/* 1 */}
 				<div className="flex flex-col rounded-2xl outline outline-1 outline-[#C2C2C2] overflow-hidden col-span-4">
 					{/* Photo */}
-					<div className="hidden lg:block h-[288px] bg-[#556145]"></div>
+					<div className="hidden h-[288px] bg-[#556145] lg:flex items-center justify-center">
+						<Image src={shoe_2} alt="shoe photo testimonial" className="scale-90" />
+					</div>
 					{/* content */}
-					<div className="flex py-4 px-6 flex-col gap-6">
+					<div className="flex flex-col gap-6 px-6 py-4">
 						<div className="flex gap-4">
 							<svg xmlns="http://www.w3.org/2000/svg" className="size-14" viewBox="0 0 36 36">
 								<mask id=":rio:" width="36" height="36" x="0" y="0" maskUnits="userSpaceOnUse">
@@ -375,9 +396,11 @@ export default function Home() {
 				{/* 2 */}
 				<div className="flex flex-col rounded-2xl outline outline-1 outline-[#C2C2C2] overflow-hidden col-span-4">
 					{/* Photo */}
-					<div className="hidden lg:block h-[288px] bg-[#E08452]"></div>
+					<div className="hidden lg:flex items-center justify-center h-[288px] bg-[#E08452]">
+						<Image src={shoe_3} alt="shoe photo testimonial" className="scale-90" />
+					</div>
 					{/* content */}
-					<div className="flex py-4 px-6 flex-col gap-6">
+					<div className="flex flex-col gap-6 px-6 py-4">
 						<div className="flex gap-4">
 							<svg xmlns="http://www.w3.org/2000/svg" className="size-14" viewBox="0 0 36 36">
 								<mask id=":riv:" width="36" height="36" x="0" y="0" maskUnits="userSpaceOnUse">
@@ -420,9 +443,11 @@ export default function Home() {
 				{/* 3 */}
 				<div className="flex flex-col rounded-2xl outline outline-1 outline-[#C2C2C2] overflow-hidden col-span-4 md:col-span-8 lg:col-span-4">
 					{/* Photo */}
-					<div className="hidden lg:block h-[288px] bg-[#FFBC59]"></div>
+					<div className="hidden lg:flex items-center justify-center h-[288px] bg-[#FFBC59]">
+						<Image src={shoe_4} alt="shoe photo testimonial" className="scale-90" />
+					</div>
 					{/* content */}
-					<div className="flex py-4 px-6 flex-col gap-6">
+					<div className="flex flex-col gap-6 px-6 py-4">
 						<div className="flex gap-4">
 							<svg xmlns="http://www.w3.org/2000/svg" className="size-14" viewBox="0 0 36 36">
 								<mask id=":rjc:" width="36" height="36" x="0" y="0" maskUnits="userSpaceOnUse">
@@ -470,7 +495,7 @@ export default function Home() {
 			</div>
 			{/* Footer */}
 			<footer className="flex flex-wrap py-6">
-				<div className="flex flex-col gap-3 w-full lg:w-fit lg:mr-auto">
+				<div className="flex flex-col w-full gap-3 lg:w-fit lg:mr-auto">
 					<p className="text-xl font-bold leading-7 text-[#333333]">GlobalClean</p>
 					<p className="text-[#717171] text-base">
 						Globalclean care service established in 2016. <br className="hidden md:block" /> We provide viariety of services for you
@@ -479,7 +504,7 @@ export default function Home() {
 				{/* Summary */}
 				<div className="flex flex-col min-w-[50%] md:min-w-[25%] lg:min-w-[215px] mt-5">
 					<p className="text-[#333333] font-bold text-base mb-4">Summary</p>
-					<ul className=" space-y-3">
+					<ul className="space-y-3 ">
 						<li>
 							<a href="#services" className=" text-[#717171] hover:text-[#333333]">
 								Services
@@ -505,7 +530,7 @@ export default function Home() {
 				{/* Company */}
 				<div className="flex flex-col min-w-[50%] md:min-w-[25%] lg:min-w-[215px] mt-5">
 					<p className="text-[#333333] font-bold text-base mb-4">Company</p>
-					<ul className=" space-y-3">
+					<ul className="space-y-3 ">
 						<li>
 							<a href="#" className=" text-[#717171] hover:text-[#333333]">
 								Story
@@ -526,7 +551,7 @@ export default function Home() {
 				{/* Support */}
 				<div className="flex flex-col min-w-[50%] md:min-w-[25%] lg:min-w-[215px] mt-5">
 					<p className="text-[#333333] font-bold text-base mb-4">Support</p>
-					<ul className=" space-y-3">
+					<ul className="space-y-3 ">
 						<li>
 							<a href="#" className=" text-[#717171] hover:text-[#333333]">
 								Faqs
@@ -560,10 +585,10 @@ export default function Home() {
 						</li>
 					</ul>
 				</div>
-				<Separator className="w-dvw relative my-5"/>
-				<div className="flex gap-5 flex-col lg:flex-row w-full">
+				<Separator className="relative my-5 w-dvw" />
+				<div className="flex flex-col w-full gap-5 lg:flex-row">
 					<p className="text-[#717171] w-full">© 2022 Globalclean. All right reserved</p>
-					<div className="flex w-full flex-wrap gap-1 lg:justify-end">
+					<div className="flex flex-wrap w-full gap-1 lg:justify-end">
 						<a className=" cursor-pointer text-[#717171] hover:text-[#333333]">Terms of Service</a>
 						<span className="text-[#717171]">|</span>
 						<a className=" cursor-pointer text-[#717171] hover:text-[#333333]">Policy</a>
